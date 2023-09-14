@@ -1,11 +1,13 @@
 import React from 'react';
 import MarketingApp from './components/MarketingApp';
+import Header from './components/Header';
+import { BrowserRouter } from 'react-router-dom';
+
 export default () => {
-  console.log('feature test');
   return (
-    <>
-      <h1>Hi there!</h1>
+    <BrowserRouter>
+      <Header />
       <MarketingApp />
-    </>
+    </BrowserRouter>
   );
 };
