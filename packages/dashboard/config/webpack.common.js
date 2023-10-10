@@ -1,7 +1,7 @@
 const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: 'src/index.js',
   output: {
     filename: '[name].[contenthash].js',
   },
@@ -14,10 +14,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif|woff|svg|eot|tff)$/i,
         use: [{ loader: 'file-loader' }],
       },
-      {
-        test: /\.vuew$/,
-        use: 'vue-loader',
-      },
+      { test: /\.vue$/, loader: 'vue-loader' },
       {
         test: /\.scss|\.css$/,
         use: ['vue-style-loader', 'style-loader', 'sass-loader'],
